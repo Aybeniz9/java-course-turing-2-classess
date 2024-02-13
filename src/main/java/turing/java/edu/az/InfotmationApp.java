@@ -18,6 +18,8 @@ public class InfotmationApp {
             System.out.println(i + "-ci yasi daxil edin ");
             age[i] = sc.nextInt();
         }
+
+
         for (int i = 0; i < n; i++) {
             System.out.println(i + "-ci grade daxil edin ");
 
