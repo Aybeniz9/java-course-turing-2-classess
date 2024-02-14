@@ -22,7 +22,6 @@ public class InfotmationApp {
 
         for (int i = 0; i < n; i++) {
             System.out.println(i + "-ci grade daxil edin ");
-
             grade[i] = sc.nextInt();
         }
         for (int i = 0; i < n; i++) {
