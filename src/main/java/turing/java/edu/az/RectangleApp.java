@@ -1,13 +1,13 @@
 package turing.java.edu.az;
 
-public class SquareApp {
+public class RectangleApp {
     private double side;
     private String color;
     public long countOfSquares;
     public long getCountOfSquares() {
         return countOfSquares;
     }
-    public SquareApp(double side, String color, long countOfSquares) {
+    public RectangleApp(double side, String color, long countOfSquares) {
         this.side=side;
         this.color = color;
         this.countOfSquares=countOfSquares;
