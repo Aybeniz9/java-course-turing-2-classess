@@ -4,7 +4,6 @@ public class Circle {
     private final double radius;
     private String color;
     public long countOfCircles;
-    public double calcLongth;
 
     public Circle(double radius, String color, long countOfCircles) {
         this.radius = radius;
@@ -12,10 +11,6 @@ public class Circle {
         this.countOfCircles = countOfCircles;
     }public long countOfCircle() {
         return countOfCircles;
-    }
-
-    public double calcLongth() {
-        return calcLongth;
     }
     public String getColor() {
 
@@ -25,5 +20,8 @@ public class Circle {
     public void setColor() {
         if (color != "White")
             this.color = color;
+    }
+    public double getCalcLongth(){
+        return 2*Math.PI*radius;
     }
 }
