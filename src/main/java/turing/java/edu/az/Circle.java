@@ -1,26 +1,22 @@
 package turing.java.edu.az;
 
 public class Circle {
-    public static double radius;
-    public static String color;
-    public long countOfCircle;
+    private final double radius;
+    private String color;
+    public long countOfCircles;
     public double calcLongth;
 
-    public Circle(double radius, String color, long countOfCircle) {
+    public Circle(double radius, String color, long countOfCircles) {
         this.radius = radius;
         this.color = color;
-        this.countOfCircle = countOfCircle;
-    }
-
-
-    public long countOfCircle() {
-        return countOfCircle;
+        this.countOfCircles = countOfCircles;
+    }public long countOfCircle() {
+        return countOfCircles;
     }
 
     public double calcLongth() {
         return calcLongth;
     }
-
     public String getColor() {
 
         return color;
@@ -30,6 +26,4 @@ public class Circle {
         if (color != "White")
             this.color = color;
     }
-
-
 }
