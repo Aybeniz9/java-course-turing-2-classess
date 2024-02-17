@@ -32,6 +32,7 @@ public class MovieApp {
                         System.out.println();
                     }
                 }
+
             } else if (number == 3) {                            //3
                 System.out.println("Enter how many movies");
                 int numberOpt3 = sc.nextInt();
