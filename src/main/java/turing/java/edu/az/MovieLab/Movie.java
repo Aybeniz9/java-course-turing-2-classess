@@ -11,7 +11,6 @@ public class Movie {
     public void setName(String name) {
         this.name = name;
     }
-
     public double getRating() {
         return rating;
     }
