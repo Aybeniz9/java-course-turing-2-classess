@@ -1,8 +1,8 @@
 package turing.java.edu.az.MovieLab;
 
 public class Movie {
-    public String  name;
-    public  double rating;
+    private String  name;
+    private  double rating;
 
     public String getName() {
         return name;
