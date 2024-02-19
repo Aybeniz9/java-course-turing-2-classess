@@ -10,7 +10,6 @@ public class Apple extends Fruit {
      public void giveApple(){
         System.out.println("Marketden alma alinmisdir");
     }
-
     public void soyApple(){
         System.out.println("Alma soyulmusdur");
     }
