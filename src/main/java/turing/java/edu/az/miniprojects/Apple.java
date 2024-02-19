@@ -10,6 +10,7 @@ public class Apple extends Fruit {
      public void giveApple(){
         System.out.println("Marketden alma alinmisdir");
     }
+
     public void soyApple(){
         System.out.println("Alma soyulmusdur");
     }
@@ -22,6 +23,7 @@ public class Apple extends Fruit {
     }
 
     public Apple(String nationality) {
-        this.nationality = nationality;
+         this.nationality = nationality;
+        super();
     }
 }
