@@ -1,4 +1,4 @@
-package turing.java.edu.az;
+package turing.java.edu.az.module02;
 
 public class Square {
     public static void main(String[] args) {

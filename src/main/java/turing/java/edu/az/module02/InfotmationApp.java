@@ -1,4 +1,4 @@
-package turing.java.edu.az;
+package turing.java.edu.az.module02;
 
 import java.util.Scanner;
 import javax.swing.*;

@@ -1,4 +1,6 @@
-package turing.java.edu.az;
+package turing.java.edu.az.module02;
+
+import turing.java.edu.az.module02.Circle;
 
 public class CircleCount {
     public static void main(String[] args) {

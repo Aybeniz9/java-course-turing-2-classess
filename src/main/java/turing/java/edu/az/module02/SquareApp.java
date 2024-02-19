@@ -1,4 +1,4 @@
-package turing.java.edu.az;
+package turing.java.edu.az.module02;
 
 public class SquareApp {
     private double side;
