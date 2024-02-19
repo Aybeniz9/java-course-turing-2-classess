@@ -1,6 +1,6 @@
 package turing.java.edu.az.miniprojects;
 
-public class Apple {
+public class Apple extends Fruit {
 
      public  String nationality;
 
