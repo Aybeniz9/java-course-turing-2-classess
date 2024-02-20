@@ -19,8 +19,8 @@ public class Fruit {
 
 
     public static void main(String[] args) {
-        Apple apple=new Apple("Quba");
-        System.out.println(apple.nationality);
+       // Apple apple=new Apple("Quba");
+        //System.out.println(apple.nationality);
         Fruit fruit=new Fruit("Qirmizi",5);
     }
 
