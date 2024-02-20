@@ -3,6 +3,7 @@ package turing.java.edu.az.miniprojects;
 public class AHappyFamilyProject {
     public static void main(String[] args) {
        Human human=new Human();
+
         Human.Schedule myschedule=new Human.Schedule();
 
         Pet pet=new Pet("Rock","dog",5,75, new String[]{"drink,eat,sleep"});
@@ -13,7 +14,7 @@ public class AHappyFamilyProject {
                 new Pet(),
                 "Jane Karleone",
                 "Vito Karleone",
-                Human.Schedule[][]);
+                new Human.Schedule[][]{"Monday"}{"activity"});
 
 
     }

@@ -24,8 +24,6 @@ public class Human {
     }
     public static class Schedule {
         public String[][] schedule;
-
-        // Constructor to initialize the schedule
         public Schedule() {
             this.schedule = new String[][]{
                     {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"},
@@ -33,7 +31,6 @@ public class Human {
             };
         }
 
-        // Method to get activity for a given day
         public String getActivity(String day) {
             for (int i = 0; i < schedule[0].length; i++) {
                 if (schedule[0][i].equalsIgnoreCase(day)) {
