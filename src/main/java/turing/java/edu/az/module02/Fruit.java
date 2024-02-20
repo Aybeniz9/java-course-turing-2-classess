@@ -1,4 +1,4 @@
-package turing.java.edu.az.miniprojects;
+package turing.java.edu.az.module02;
 
 public class Fruit {
     public String color;

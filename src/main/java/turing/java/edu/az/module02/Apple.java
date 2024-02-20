@@ -1,10 +1,14 @@
-package turing.java.edu.az.miniprojects;
+package turing.java.edu.az.module02;
 
 public class Apple extends Fruit {
 
      public  String nationality;
 
-     public void eatApple( ){
+    public Apple(String color, int kq) {
+        super(color, kq);
+    }
+
+    public void eatApple( ){
          System.out.println("Alma yeyilmisdir");
      }
      public void giveApple(){
@@ -21,8 +25,8 @@ public class Apple extends Fruit {
         return nationality;
     }
 
-    public Apple(String nationality) {
-         this.nationality = nationality;
-        super();
+    //public Apple(String nationality) {
+    //     this.nationality = nationality;
+     //   super();
     }
-}
+
