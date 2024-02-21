@@ -12,6 +12,7 @@ public class Figure {
     }
 
 
+
     public void setColor(String color) {
         this.color = color;
     }
