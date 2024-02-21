@@ -2,7 +2,6 @@ package turing.java.edu.az.module02;
 
 public class PlainFigure extends Figure {
     private double area;
-
     public PlainFigure(String name, String color) {
         super(name, color);
     }

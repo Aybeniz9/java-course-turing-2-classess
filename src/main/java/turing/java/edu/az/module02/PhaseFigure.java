@@ -3,7 +3,6 @@ package turing.java.edu.az.module02;
 public class PhaseFigure extends Figure {
     private double volume;
     public double height;
-
     public PhaseFigure(String name, String color) {
         super(name, color);
     }
@@ -25,11 +24,9 @@ public class PhaseFigure extends Figure {
     public double getHeight() {
         return height;
     }
-
     public void setHeight(double height) {
         this.height = height;
     }
-
     public double calculateVolume() {
         return 0;
     }

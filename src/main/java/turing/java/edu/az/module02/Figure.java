@@ -3,12 +3,10 @@ package turing.java.edu.az.module02;
 public class Figure {
     public String name;
     public String color;
-
     public Figure(String name, String color) {
         this.name = name;
         this.color = color;
     }
-
     public String getColor() {
         return color;
     }
