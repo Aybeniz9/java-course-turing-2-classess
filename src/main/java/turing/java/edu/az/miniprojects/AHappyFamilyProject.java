@@ -7,15 +7,15 @@ public class AHappyFamilyProject {
         Human.Schedule myschedule=new Human.Schedule();
 
         Pet pet=new Pet("Rock","dog",5,75, new String[]{"drink,eat,sleep"});
-        Human human1=new Human("Michael",
-                "Karleone",
-                1977,
-                90,
-                new Pet(),
-                "Jane Karleone",
-                "Vito Karleone",
-                new Human.Schedule[][]{"Monday"}{"activity"});
+        //Human human1=new Human("Michael",
+//                "Karleone",
+//                1977,
+//                90,
+//                new Pet(),
+//                "Jane Karleone",
+//                "Vito Karleone",
+                //new Human.Schedule[][]{"Monday"}{"activity"});
 
 
-    }
-}
+
+}}
