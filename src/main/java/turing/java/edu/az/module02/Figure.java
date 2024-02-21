@@ -11,8 +11,6 @@ public class Figure {
         return color;
     }
 
-
-
     public void setColor(String color) {
         this.color = color;
     }
