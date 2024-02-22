@@ -7,6 +7,7 @@ public class Figure {
         this.name = name;
         this.color = color;
     }
+
     public String getColor() {
         return color;
     }
