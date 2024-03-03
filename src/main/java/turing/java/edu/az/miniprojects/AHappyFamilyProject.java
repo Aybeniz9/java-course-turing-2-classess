@@ -2,22 +2,15 @@ package turing.java.edu.az.miniprojects;
 
 public class AHappyFamilyProject {
     public static void main(String[] args) {
-       Human human=new Human();
-
-        Human.Schedule myschedule=new Human.Schedule();
-
-
-
-        Pet pet=new Pet("Rock","dog",5,75, new String[]{"drink,eat,sleep"});
-        //Human human1=new Human("Michael",
-//                "Karleone",
-//                1977,
-//                90,
-//                new Pet(),
-//                "Jane Karleone",
-//                "Vito Karleone",
-                //new Human.Schedule[][]{"Monday"}{"activity"});
-
-
-
-}}
+        Pet pet = new Pet("dog", "Rock", 5, 75, new String[]{"eat", "drink", "sleep"});
+        Human father = new Human("Vito", "Karleone", 1940);
+        Human mother = new Human("Jane", "Karleone", 1950);
+        Human child = new Human("Michael", "Karleone", 1977, 90, pet, mother, father, null);
+        System.out.println(child.toString());
+        child.pet.eat();
+        child.pet.respond();
+        child.pet.foul();
+        child.greetPet();
+        child.describePet();
+    }
+}
