@@ -6,11 +6,9 @@ import java.util.Objects;
 public class Pet {
     private String nickname;
     private String spaces;
-
-     private int age;
+    private int age;
     private int trickLevel;
     private String[] habits;
-
 
 
     public Pet(String spaces, String nickname) {
@@ -82,23 +80,28 @@ public class Pet {
         System.out.println("I need to cover it up");
     }
 
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Pet pet)) return false;
-        return age == pet.age && trickLevel == pet.trickLevel && Objects.equals(nickname, pet.nickname) && Objects.equals(spaces, pet.spaces) && Arrays.equals(habits, pet.habits);
+        return getAge() == pet.getAge() && getTrickLevel() == pet.getTrickLevel() && Objects.equals(getNickname(), pet.getNickname()) && Objects.equals(spaces, pet.spaces) && Arrays.equals(getHabits(), pet.getHabits());
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(nickname, spaces, age, trickLevel);
-        result = 31 * result + Arrays.hashCode(habits);
+        int result = Objects.hash(getNickname(), spaces, getAge(), getTrickLevel());
+        result = 31 * result + Arrays.hashCode(getHabits());
         return result;
     }
 
+    @Override
     public String toString() {
-        return spaces + "{nickname='" + nickname + "', age=" + age + ", trickLevel=" + trickLevel + ", habits=" + Arrays.toString(habits) + "}";
+        return "Pet{" +
+                "nickname='" + nickname + '\'' +
+                ", spaces='" + spaces + '\'' +
+                ", age=" + age +
+                ", trickLevel=" + trickLevel +
+                ", habits=" + Arrays.toString(habits) +
+                '}';
     }
-
 }
