@@ -1,10 +1,12 @@
 package turing.java.edu.az.module02.Birht;
 
-import turing.java.edu.az.module02.Birht.Person;
-
 public class Student extends Person {
     int grade;
     String uniName;
+
+    public Student() {
+        super(birthDate, name);
+    }
 
     @Override
     public void doHappyBirthday() {
