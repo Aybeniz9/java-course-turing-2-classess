@@ -13,7 +13,7 @@ public class Teacher extends Person {
 
     @Override
     public void doHappyBirthday() {
-        System.out.println(super.birthDate+"Happyy");
+        System.out.println(super.birthDate + "Happyy");
 
     }
 }
