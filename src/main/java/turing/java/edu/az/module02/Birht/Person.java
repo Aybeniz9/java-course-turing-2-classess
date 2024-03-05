@@ -12,7 +12,6 @@ abstract class Person implements Nefess, Yatmaq {
         this.name = name;
     }
 
-
     public abstract void doHappyBirthday();
 
 }
