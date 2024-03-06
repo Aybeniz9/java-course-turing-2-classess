@@ -106,7 +106,7 @@ public class Family {
         return false;
     }
     public int countFamily() {
-        return children.length + 2; // Including parents
+        return children.length + 2;
 
     }
 
