@@ -92,6 +92,7 @@ public class Family {
         child.setFamily(this);
         System.out.println(child);
     }
+
     public boolean deleteChild(int index) {
         if (index >= 0 && index < children.length) {
             Human[] newArray = new Human[children.length - 1];
