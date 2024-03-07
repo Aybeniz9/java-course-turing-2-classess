@@ -134,4 +134,10 @@ public class Family {
         result = 31 * result + Arrays.hashCode(getChildren());
         return result;
     }
+    @Override
+    protected void finalize() throws Throwable {
+        System.out.println("Family " + mother + " is being removed.");
+        super.finalize();
+    }
+
 }

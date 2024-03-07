@@ -3,22 +3,22 @@ package turing.java.edu.az.miniprojects;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class Pet {
+public abstract class Pet {
     private String nickname;
-    private String spaces;
+    private Species spaces;
     private int age;
     private int trickLevel;
     private String[] habits;
 
 
     public Pet(String spaces, String nickname) {
-        this.spaces = spaces;
+        this.spaces = Species.COW;
         this.nickname = nickname;
     }
 
     public Pet(String nickname, String spaces, int age, int trickLevel, String[] habits) {
         this.nickname = nickname;
-        this.spaces = spaces;
+        this.spaces = Species.COW;
         this.age = age;
         this.trickLevel = trickLevel;
         this.habits = habits;
@@ -30,11 +30,11 @@ public class Pet {
     }
 
     public String getSpecies() {
-        return spaces;
+        return String.valueOf(Species.COW);
     }
 
     public void setSpecies(String spaces) {
-        this.spaces = spaces;
+        this.spaces = Species.valueOf(spaces);
     }
 
     public String getNickname() {

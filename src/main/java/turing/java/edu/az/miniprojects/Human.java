@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Human {
     private Family family;
-    private String[][] schedule;
+    private DayOfWeek schedule;
     private String name;
     private String surname;
     private int year;
@@ -50,12 +50,12 @@ public class Human {
 //     this.father = father;
 //    }
 
-    public Human(String name, String surname, int year, int iq, String[][] schedule) {
+    public Human(String name, String surname, int year, int iq, DayOfWeek schedule) {
         this.name = name;
         this.surname = surname;
         this.year = year;
         this.iq = iq;
-        this.schedule = schedule;
+        this.schedule = DayOfWeek.FRIDAY;
     }
 
     public Human() {
@@ -126,19 +126,19 @@ public class Human {
 //        this.father = father;
 //    }
 
-    public String[][] getSchedule() {
-        return schedule;
+    public DayOfWeek getSchedule() {
+        return DayOfWeek.FRIDAY;
     }
 
     public void setSchedule(String[][] schedule) {
-        this.schedule = schedule;
+        this.schedule = DayOfWeek.FRIDAY;
     }
 
 
     @Override
     public String toString() {
         return "Human{" +
-                "schedule=" + Arrays.toString(schedule) +
+                "schedule=" + Arrays.toString(new DayOfWeek[]{DayOfWeek.FRIDAY}) +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", year=" + year +
@@ -150,13 +150,13 @@ public class Human {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Human human)) return false;
-        return year == human.year && iq == human.iq && Arrays.equals(schedule, human.schedule) && Objects.equals(name, human.name) && Objects.equals(surname, human.surname);
+        return getYear() == human.getYear() && getIq() == human.getIq() && Objects.equals(getFamily(), human.getFamily()) && getSchedule() == human.getSchedule() && Objects.equals(getName(), human.getName()) && Objects.equals(getSurname(), human.getSurname());
     }
 
     @Override
     public int hashCode() {
         int result = Objects.hash(name, surname, year, iq);
-        result = 31 * result + Arrays.hashCode(schedule);
+        result = 31 * result + Arrays.hashCode(new DayOfWeek[]{DayOfWeek.FRIDAY});
         return result;
     }
 }
