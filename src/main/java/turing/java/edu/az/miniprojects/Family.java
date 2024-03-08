@@ -77,14 +77,14 @@ public class Family {
 //        this.family = family;
 //    }
 
-    public void greetPet() {
-        System.out.println("Hello," + pet.getNickname());
-    }
-
-    public void describePet() {
-        String slyLevel = (pet.getTrickLevel() > 50) ? "very sly" : "almost not sly";
-        System.out.println("I have an " + pet.getSpecies() + " is " + pet.getAge() + " years old, he is " + slyLevel);
-    }
+//    public void greetPet() {
+//        System.out.println("Hello," + pet.getNickname());
+//    }
+//
+//    public void describePet() {
+//        String slyLevel = (pet.getTrickLevel() > 50) ? "very sly" : "almost not sly";
+//        System.out.println("I have an " + pet.getSpecies() + " is " + pet.getAge() + " years old, he is " + slyLevel);
+//    }
     public void addChild(Human child) {
         Human[] newArray = Arrays.copyOf(children, children.length + 1);
         newArray[newArray.length - 1] = child;

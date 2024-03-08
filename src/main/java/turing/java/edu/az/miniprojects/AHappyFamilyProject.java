@@ -8,6 +8,19 @@ public class AHappyFamilyProject {
         Human mother = new Human("Jane", "Karleone", 1950,89,null);
         Human child =new Human("bebes","bebesov",2004,78,null);
         Family family=new Family(mother,father,new Pet());
+        Human human=new Human();
+        Fish fish = new Fish("Nemo");
+        DomesticCat cat = new DomesticCat("Whiskers");
+        Dog dog = new Dog("Buddy");
+        RoboCat roboCat = new RoboCat("Circuit");
+
+        fish.respond();
+        cat.respond();
+        dog.respond();
+        roboCat.respond();
+
+        cat.foul();
+        dog.foul();
         System.out.println("Father name= "+father.getName());
         System.out.println("Father toString "+father.toString());
         System.out.println("Father IQ"+father.getIq());
@@ -17,7 +30,7 @@ public class AHappyFamilyProject {
         System.out.println("Mother surname= "+mother.getSurname());
         System.out.println("Mother IQ"+mother.getIq());
         System.out.println("Mother getFamily"+mother.getFamily());
-
+family.addChild(child);
 
         System.out.println("Child name ="+ child.getName());
         System.out.println("Child family="+child.getFamily());
@@ -35,13 +48,10 @@ public class AHappyFamilyProject {
         System.out.println("Pet age is " +pet.getAge());
         System.out.println("Pet Tostring is ="+ pet.toString());
         System.out.println( "Pet trikLEvel= "+ pet.getTrickLevel());
-        family.greetPet();
-        family.describePet();
+        human.greetPet();
         pet.eat();
         pet.foul();
-
-
-       pet.respond();
+        pet.respond();
 
 
 //        child.pet.eat();

@@ -37,6 +37,14 @@ public class Human {
 //            return "No activity found for " + day;
 //        }
 //    }
+    public void greetPet() {
+        System.out.println("Hello," +family.getPet().getNickname());
+    }
+
+    public void describePet() {
+        String slyLevel = (family.getPet().getTrickLevel() > 50) ? "very sly" : "almost not sly";
+        System.out.println("I have an " + family.getPet().getSpecies() + " is " + family.getPet().getAge() + " years old, he is " + slyLevel);
+    }
     public Human(String name, String surname, int year) {
         this.name = name;
         this.surname = surname;
