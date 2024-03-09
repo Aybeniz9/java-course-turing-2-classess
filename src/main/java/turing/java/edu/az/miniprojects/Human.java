@@ -5,6 +5,8 @@ import java.util.Objects;
 
 
 public class Human {
+    private Human[] children = new Human[10];
+    private int numChildren = 0;
     private Family family;
     private DayOfWeek schedule;
     private String name;
@@ -87,7 +89,38 @@ public class Human {
     }
 
     public void setSchedule(String[][] schedule) {
-        this.schedule = DayOfWeek.FRIDAY;
+        this.schedule = DayOfWeek.FRIDAY;}
+    public boolean deleteChild(Human child) {
+        for (int i = 0; i < numChildren; i++) {
+            if (children[i].equals(child)) {
+                children[i] = null;
+                numChildren--;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean deleteChild(int index) {
+        if (index >= 0 && index < numChildren) {
+            for (int i = index; i < numChildren - 1; i++) {
+                children[i] = children[i + 1];
+            }
+            children[numChildren - 1] = null;
+            numChildren--;
+            return true;
+        }
+        return false;
+    }
+
+    public void addChild(Human child) {
+        if (numChildren < children.length) {
+            children[numChildren++] = child;
+        }
+    }
+
+    public int countFamily() {
+        return 1 + numChildren;
     }
 
 

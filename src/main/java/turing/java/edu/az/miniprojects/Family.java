@@ -4,20 +4,18 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Family {
-//    Human mother=new Human();
-//    Human father=new Human();
-//    Human child1=new Human();
-//    Human child2=new Human();
-//    private Family family;
     private Human mother;
     private Human father;
-    private Human []children;
+
+    private Human[] children = new Human[10];
+    private int numChildren = 0;
     private Pet pet;
+
     public Family(Human mother, Human father, Pet pet) {
         this.mother = mother;
         this.father = father;
         this.pet = pet;
-        this.children = new Human[0];
+        this.children = new Human[10];
     }
 
     public Family(Human mother, Human father, Human[] children, Pet pet) {
@@ -69,32 +67,6 @@ public class Family {
         this.pet = pet;
     }
 
-    public void addChild(Human child) {
-        Human[] newArray = Arrays.copyOf(children, children.length + 1);
-        newArray[newArray.length - 1] = child;
-        children = newArray;
-        child.setFamily(this);
-        System.out.println(child);
-    }
-
-    public boolean deleteChild(int index) {
-        if (index >= 0 && index < children.length) {
-            Human[] newArray = new Human[children.length - 1];
-            for (int i = 0, j = 0; i < children.length; i++) {
-                if (i != index) {
-                    newArray[j++] = children[i];
-                }
-            }
-            children = newArray;
-            return true;
-        }
-        return false;
-    }
-    public int countFamily() {
-        return children.length + 2;
-
-    }
-
     @Override
     public String toString() {
         return "Family{" +
@@ -118,6 +90,7 @@ public class Family {
         result = 31 * result + Arrays.hashCode(getChildren());
         return result;
     }
+
     @Override
     protected void finalize() throws Throwable {
         System.out.println("Family " + mother + " is being removed.");

@@ -14,4 +14,10 @@ public enum DayOfWeek {
         this.dayOfTheWeek = dayOfTheWeek;
     }
 
+    @Override
+    public String toString() {
+        return "DayOfWeek{" +
+                "dayOfTheWeek='" + dayOfTheWeek + '\'' +
+                '}';
+    }
 }

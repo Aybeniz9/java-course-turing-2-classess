@@ -8,7 +8,7 @@ public class Fish extends Pet{
         }
         @Override
         public void respond() {
-            System.out.println("Just keep swimming...");
+            System.out.println("swimminnggg");
         }
     @Override
     public void foul() {

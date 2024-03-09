@@ -12,7 +12,7 @@ public class RoboCat extends Pet{
         }
     @Override
     public void foul() {
-        // RoboCat doesn't foul
+
         System.out.println("RoboCat doesn't foul.");
     }
     public RoboCat(String spaces, String nickname) {

@@ -3,7 +3,7 @@ package turing.java.edu.az.miniprojects;
 import java.util.Arrays;
 import java.util.Objects;
 
-public  abstract  class Pet {
+public abstract class Pet {
     private String nickname;
     private Species spaces;
     private int age;
@@ -23,7 +23,6 @@ public  abstract  class Pet {
         this.trickLevel = trickLevel;
         this.habits = habits;
     }
-
 
     public String getSpecies() {
         return String.valueOf(Species.DOG);
@@ -64,6 +63,7 @@ public  abstract  class Pet {
     public void setHabits(String[] habits) {
         this.habits = habits;
     }
+
     public void eat() {
         System.out.println("I am eating");
     }

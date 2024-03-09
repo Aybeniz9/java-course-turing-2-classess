@@ -4,7 +4,7 @@ public enum Species {
     DOG("Dog"),
     FISH("FISH"),
     ROBO_CAT("ROBOCAT"),
-    UNKNOWN("UNKNOWN)"),
+    UNKNOWN("UNKNOWN )"),
     DOMESTIC_CAT("domestic cat");
     private final String speciesName;
 

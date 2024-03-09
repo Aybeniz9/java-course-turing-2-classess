@@ -7,7 +7,7 @@ final class Woman extends Human{
     }
 
     public void makeup() {
-        System.out.println("Time to do some makeup.");
+        System.out.println("Menim makeupa ehtiyacim yoxdur");
     }
 
 }

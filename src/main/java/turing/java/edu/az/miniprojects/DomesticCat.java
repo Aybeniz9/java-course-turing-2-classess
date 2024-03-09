@@ -8,7 +8,7 @@ public class DomesticCat extends Pet{
 
         @Override
         public void respond() {
-            System.out.println("Meow!");
+            System.out.println("Miyauu!");
         }
 
         public void foul() {

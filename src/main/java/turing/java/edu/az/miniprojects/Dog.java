@@ -8,7 +8,7 @@ public class Dog extends Pet{
 
         @Override
         public void respond() {
-            System.out.println("Woof!");
+            System.out.println("Havv Havvv!");
         }
 
         public void foul() {
