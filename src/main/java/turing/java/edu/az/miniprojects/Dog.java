@@ -12,7 +12,7 @@ public class Dog extends Pet{
         }
 
         public void foul() {
-            System.out.println("Left a surprise in the backyard...");
+            System.out.println("Surpriseee..");
         }
     public Dog(String spaces, String nickname) {
         super(spaces, nickname);

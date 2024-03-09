@@ -8,13 +8,9 @@ public class RoboCat extends Pet{
 
         @Override
         public void respond() {
-            System.out.println("Beep boop! I am RoboCat.");
+            System.out.println("Biiip biiip! Iy em RoboCat.");
         }
-    @Override
-    public void foul() {
-
-        System.out.println("RoboCat doesn't foul.");
-    }
+   
     public RoboCat(String spaces, String nickname) {
         super(spaces, nickname);
     }

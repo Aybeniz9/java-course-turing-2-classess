@@ -12,7 +12,7 @@ public class DomesticCat extends Pet{
         }
 
         public void foul() {
-            System.out.println("Made a mess in the litter box...");
+            System.out.println("Mennn deliyemmm, xesteyemm mennn...");
         }
     public DomesticCat(String spaces, String nickname) {
         super(spaces, nickname);

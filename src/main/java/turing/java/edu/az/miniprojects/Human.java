@@ -5,27 +5,18 @@ import java.util.Objects;
 
 
 public class Human {
-    private Human[] children = new Human[10];
-    private int numChildren = 0;
-    private Family family;
-    private DayOfWeek schedule;
     private String name;
     private String surname;
     private int year;
     private int iq;
+    private DayOfWeek schedule;
+    public Family family;
+    private Human[] children = new Human[10];
+    private int numChildren = 0;
 
-    public DayOfWeek name(DayOfWeek dayOfWeek){
-        return dayOfWeek;
 
-    }
-    public void greetPet() {
-        System.out.println("Hello," +family.getPet().getNickname());
-    }
 
-    public void describePet() {
-        String slyLevel = (family.getPet().getTrickLevel() > 50) ? "very sly" : "almost not sly";
-        System.out.println("I have an " + family.getPet().getSpecies() + " is " + family.getPet().getAge() + " years old, he is " + slyLevel);
-    }
+
     public Human(String name, String surname, int year) {
         this.name = name;
         this.surname = surname;
@@ -43,6 +34,19 @@ public class Human {
     public Human() {
     }
 
+
+    public DayOfWeek name(DayOfWeek dayOfWeek){
+        return dayOfWeek;
+
+    }
+    public void greetPet() {
+        System.out.println("Hello," +family.getPet().getNickname());
+    }
+
+    public void describePet() {
+        String slyLevel = (family.getPet().getTrickLevel() > 50) ? "very sly" : "almost not sly";
+        System.out.println("I have an " + family.getPet().getSpecies() + " is " + family.getPet().getAge() + " years old, he is " + slyLevel);
+    }
     public String getName() {
         return name;
     }
@@ -85,11 +89,11 @@ public class Human {
     }
 
     public DayOfWeek getSchedule() {
-        return DayOfWeek.FRIDAY;
+        return schedule;
     }
 
-    public void setSchedule(String[][] schedule) {
-        this.schedule = DayOfWeek.FRIDAY;}
+    public void setSchedule(DayOfWeek schedule) {
+        this.schedule = schedule;}
     public boolean deleteChild(Human child) {
         for (int i = 0; i < numChildren; i++) {
             if (children[i].equals(child)) {
