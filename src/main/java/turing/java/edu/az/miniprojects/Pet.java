@@ -12,73 +12,18 @@ public  abstract  class Pet {
 
 
     public Pet(String spaces, String nickname) {
-        this.spaces = Species.COW;
+        this.spaces = Species.DOG;
         this.nickname = nickname;
     }
 
     public Pet(String nickname, String spaces, int age, int trickLevel, String[] habits) {
         this.nickname = nickname;
-        this.spaces = Species.COW;
+        this.spaces = Species.DOG;
         this.age = age;
         this.trickLevel = trickLevel;
         this.habits = habits;
     }
 
-
-
-    public class Fish extends Pet{
-        public Fish(String name){
-            super(name, String.valueOf(Species.FISH));
-        }
-        @Override
-        public void respond() {
-            System.out.println("Just keep swimming...");
-        }
-
-
-    }
-    public class DomesticCat extends Pet{
-        public DomesticCat(String name) {
-            super(name, String.valueOf(Species.DOMESTIC_CAT));
-        }
-
-        @Override
-        public void respond() {
-            System.out.println("Meow!");
-        }
-
-        public void foul() {
-            System.out.println("Made a mess in the litter box...");
-        }
-
-    }
-    public class Dog extends Pet{
-        public Dog(String name) {
-            super(name, String.valueOf(Species.DOG));
-        }
-
-        @Override
-        public void respond() {
-            System.out.println("Woof!");
-        }
-
-        public void foul() {
-            System.out.println("Left a surprise in the backyard...");
-        }
-
-    }
-    public class RoboCat extends Pet{
-        public RoboCat(String name) {
-            super(name, String.valueOf(Species.ROBO_CAT));
-        }
-
-        @Override
-        public void respond() {
-            System.out.println("Beep boop! I am RoboCat.");
-        }
-        
-
-    }
 
     public String getSpecies() {
         return String.valueOf(Species.DOG);

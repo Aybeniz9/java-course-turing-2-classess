@@ -11,32 +11,11 @@ public class Human {
     private String surname;
     private int year;
     private int iq;
-    //public Pet pet ;
-//     private Human mother;
-//    private Human father;
-//    private String n;
-//    private String day;
 
+    public DayOfWeek name(DayOfWeek dayOfWeek){
+        return dayOfWeek;
 
-//    public static class Schedule {
-//        public String[][] schedule;
-
-    //        public Schedule() {
-//            this.schedule = new String[][]{
-//                    {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"},
-//                    {"Exercise", "Reading", "Cooking", "Gardening", "Painting", "Hiking", "Family Time"}
-//            };
-//        }
-//
-//        public String getActivity(String day) {
-//            for (int i = 0; i < schedule[0].length; i++) {
-//                if (schedule[0][i].equalsIgnoreCase(day)) {
-//                    return schedule[1][i];
-//                }
-//            }
-//            return "No activity found for " + day;
-//        }
-//    }
+    }
     public void greetPet() {
         System.out.println("Hello," +family.getPet().getNickname());
     }
@@ -50,13 +29,6 @@ public class Human {
         this.surname = surname;
         this.year = year;
     }
-//    public Human(String name, String surname, int year, Human mother, Human father) {
-//        this.name = name;
-//        this.surname = surname;
-//        this.year = year;
-//       this.mother = mother;
-//     this.father = father;
-//    }
 
     public Human(String name, String surname, int year, int iq, DayOfWeek schedule) {
         this.name = name;
@@ -109,30 +81,6 @@ public class Human {
     public void setIq(int iq) {
         this.iq = iq;
     }
-//
-//    public Pet getPet() {
-//        return pet;
-//    }
-//
-//    public void setPet(Pet pet) {
-//        this.pet = pet;
-//    }
-//
-//    public Human getMother() {
-//        return mother;
-//    }
-//
-//    public void setMother(Human mother) {
-//        this.mother = mother;
-//    }
-//
-//    public Human getFather() {
-//        return father;
-//    }
-//
-//    public void setFather(Human father) {
-//        this.father = father;
-//    }
 
     public DayOfWeek getSchedule() {
         return DayOfWeek.FRIDAY;
@@ -166,6 +114,10 @@ public class Human {
         int result = Objects.hash(name, surname, year, iq);
         result = 31 * result + Arrays.hashCode(new DayOfWeek[]{DayOfWeek.FRIDAY});
         return result;
+    }
+
+    public void greetPet(Pet pet) {
+
     }
 }
 
