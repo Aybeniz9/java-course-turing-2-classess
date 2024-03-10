@@ -8,6 +8,7 @@ public class App {
         String status=sc.nextLine();
         sendEmail(status);}
 
+
         public static void sendEmail(String status){
         if ("ACCEPTED".equalsIgnoreCase(status)){
             System.out.println("Your order accepted!");
