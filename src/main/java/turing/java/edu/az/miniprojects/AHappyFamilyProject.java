@@ -3,6 +3,7 @@ package turing.java.edu.az.miniprojects;
 public class AHappyFamilyProject {
     public static void main(String[] args) {
 
+
         //Pet pet = new Pet("dog", "Rock", 5, 75, new String[]{"eat", "drink", "sleep"});
         Human father = new Human("Vito", "Karleone", 1940,65,DayOfWeek.FRIDAY);
         Human mother = new Human("Jane", "Karleone", 1950,89,DayOfWeek.SUNDAY);
