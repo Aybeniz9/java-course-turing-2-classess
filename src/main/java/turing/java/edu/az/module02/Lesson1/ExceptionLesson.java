@@ -6,9 +6,9 @@ public class ExceptionLesson {
     public static void main(String[] args) {
 
 
-        Scanner sc = new Scanner(System.in);
-        String str1 = sc.nextLine();
-        String str2 = sc.nextLine();
+         final Scanner sc = new Scanner(System.in);
+         final String str1 = sc.nextLine();
+         final String str2 = sc.nextLine();
         int n1 = Integer.parseInt(str1);
 
         System.out.println(str1);
