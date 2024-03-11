@@ -7,12 +7,12 @@ public class ExceptionLesson {
 
 
         Scanner sc = new Scanner(System.in);
-        String name = sc.nextLine();
-        String surname = sc.nextLine();
-        int n1 = Integer.parseInt(name);
+        String str1 = sc.nextLine();
+        String str2 = sc.nextLine();
+        int n1 = Integer.parseInt(str1);
 
-        System.out.println(name);
-        int n2 = Integer.parseInt(surname);
+        System.out.println(str1);
+        int n2 = Integer.parseInt(str2);
         try {
         } catch (Exception e) {
             System.out.println(n1 / n2);
