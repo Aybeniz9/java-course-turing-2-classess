@@ -7,6 +7,7 @@ public class ExceptionLesson {
 
 
          final Scanner sc = new Scanner(System.in);
+
          final String str1 = sc.nextLine();
          final String str2 = sc.nextLine();
         int n1 = Integer.parseInt(str1);
