@@ -15,8 +15,10 @@ public class ExceptionLesson {
         System.out.println(str1);
         int n2 = Integer.parseInt(str2);
         try {
+
         } catch (Exception e) {
             System.out.println(n1 / n2);
+
 
         }
 
