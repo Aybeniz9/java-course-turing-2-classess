@@ -1,5 +1,7 @@
 package turing.java.edu.az.module02.Lesson1;
+
 import java.util.Scanner;
+
 public class ExceptionLesson {
     public static void main(String[] args) {
 
@@ -10,13 +12,12 @@ public class ExceptionLesson {
         int n1 = Integer.parseInt(name);
 
         System.out.println(name);
-        int n2=Integer.parseInt(surname);
-try{}
+        int n2 = Integer.parseInt(surname);
+        try {
+        } catch (Exception e) {
+            System.out.println(n1 / n2);
 
-catch (Exception e){
-    System.out.println(n1/n2);
-
-}
+        }
 
     }
 }
