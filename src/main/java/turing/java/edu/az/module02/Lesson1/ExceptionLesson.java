@@ -6,10 +6,10 @@ public class ExceptionLesson {
     public static void main(String[] args) {
 
 
-         final Scanner sc = new Scanner(System.in);
+        final Scanner sc = new Scanner(System.in);
 
-         final String str1 = sc.nextLine();
-         final String str2 = sc.nextLine();
+        final String str1 = sc.nextLine();
+        final String str2 = sc.nextLine();
         int n1 = Integer.parseInt(str1);
 
         System.out.println(str1);
@@ -18,7 +18,6 @@ public class ExceptionLesson {
 
         } catch (Exception e) {
             System.out.println(n1 / n2);
-
 
         }
 
