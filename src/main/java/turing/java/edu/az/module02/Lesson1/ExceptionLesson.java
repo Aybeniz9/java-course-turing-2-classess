@@ -17,6 +17,7 @@ public class ExceptionLesson {
         try {
 
 
+
         } catch (Exception e) {
             System.out.println(n1 / n2);
 
