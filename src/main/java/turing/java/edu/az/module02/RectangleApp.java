@@ -4,6 +4,7 @@ public class RectangleApp {
     private double side1;
     private double side2;
     private String color;
+
     public long countOfRectangle;
     public long getCountOfRectangle() {
         return countOfRectangle;
