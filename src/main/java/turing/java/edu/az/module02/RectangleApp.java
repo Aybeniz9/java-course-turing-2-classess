@@ -2,6 +2,7 @@ package turing.java.edu.az.module02;
 
 public class RectangleApp {
     private double side1;
+
     private double side2;
     private String color;
 
