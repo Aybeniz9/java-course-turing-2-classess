@@ -1,16 +1,16 @@
 package turing.java.edu.az.miniprojects;
 
-public class RoboCat extends Pet{
+public class RoboCat extends Pet {
 
     public RoboCat(String name) {
-            super(name, String.valueOf(Species.ROBO_CAT));
-        }
+        super(name, String.valueOf(Species.ROBO_CAT));
+    }
 
-        @Override
-        public void respond() {
-            System.out.println("Biiip biiip! Iy em RoboCat.");
-        }
-   
+    @Override
+    public void respond() {
+        System.out.println("Biiip biiip! Iy em RoboCat.");
+    }
+
     public RoboCat(String spaces, String nickname) {
         super(spaces, nickname);
     }

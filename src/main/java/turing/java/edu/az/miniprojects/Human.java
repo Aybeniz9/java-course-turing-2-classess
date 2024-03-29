@@ -15,8 +15,6 @@ public class Human {
     private int numChildren = 0;
 
 
-
-
     public Human(String name, String surname, int year) {
         this.name = name;
         this.surname = surname;
@@ -35,21 +33,24 @@ public class Human {
     }
 
 
-    public DayOfWeek name(DayOfWeek dayOfWeek){
+    public DayOfWeek name(DayOfWeek dayOfWeek) {
         return dayOfWeek;
 
     }
+
     public void greetPet() {
-        System.out.println("Hello," +family.getPet().getNickname());
+        System.out.println("Hello," + family.getPet().getNickname());
     }
 
     public void describePet() {
         String slyLevel = (family.getPet().getTrickLevel() > 50) ? "very sly" : "almost not sly";
         System.out.println("I have an " + family.getPet().getSpecies() + " is " + family.getPet().getAge() + " years old, he is " + slyLevel);
     }
+
     public String getName() {
         return name;
     }
+
     public void setName(String name) {
         this.name = name;
     }
@@ -93,7 +94,9 @@ public class Human {
     }
 
     public void setSchedule(DayOfWeek schedule) {
-        this.schedule = schedule;}
+        this.schedule = schedule;
+    }
+
     public boolean deleteChild(Human child) {
         for (int i = 0; i < numChildren; i++) {
             if (children[i].equals(child)) {

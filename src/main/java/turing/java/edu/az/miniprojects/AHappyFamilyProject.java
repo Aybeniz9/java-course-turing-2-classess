@@ -98,13 +98,5 @@ public class AHappyFamilyProject {
         family.getPet().foul();
         family.getPet().respond();
 
-
-
-
-//        child.pet.eat();
-//        child.pet.respond();
-//        child.pet.foul();
-//        child.greetPet();
-//        child.describePet();
     }
 }

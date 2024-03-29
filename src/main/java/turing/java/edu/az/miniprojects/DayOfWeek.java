@@ -6,7 +6,7 @@ public enum DayOfWeek {
     WEDNESDAY("WEDNESDAY"),
     THURSDAY("THURSDAY"),
     FRIDAY("FRIDAY"),
-    SATUDAY("SATUDAY"),
+    SATURDAY("SATURDAY"),
     SUNDAY("SUNDAY");
     private final String dayOfTheWeek;
 
