@@ -6,6 +6,7 @@ final class Woman extends Human {
         System.out.println("Hi, sweet " + family.getPet().getNickname() + "!");
     }
 
+
     public void makeup() {
         System.out.println("Menim makeupa ehtiyacim yoxdur");
     }
