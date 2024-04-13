@@ -1,5 +1,7 @@
 package turing.java.edu.az.miniprojects;
+import java.util.*;
 
+import java.util.Collections;
 
 public class Dog extends Pet {
     public Dog(String name) {
@@ -19,7 +21,7 @@ public class Dog extends Pet {
         super(spaces, nickname);
     }
 
-    public Dog(String nickname, String spaces, int age, int trickLevel, String[] habits) {
-        super(nickname, spaces, age, trickLevel, habits);
+    public Dog(String nickname, String spaces, int age, int trickLevel, Set<String> habits) {
+        super(nickname, spaces, age, trickLevel, Collections.singleton(habits));
     }
 }

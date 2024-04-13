@@ -1,4 +1,5 @@
 package turing.java.edu.az.miniprojects;
+import java.util.*;
 
 final class Man extends Human {
     @Override

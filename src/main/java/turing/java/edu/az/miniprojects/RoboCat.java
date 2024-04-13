@@ -1,5 +1,5 @@
 package turing.java.edu.az.miniprojects;
-
+import java.util.*;
 public class RoboCat extends Pet {
 
     public RoboCat(String name) {
@@ -15,7 +15,7 @@ public class RoboCat extends Pet {
         super(spaces, nickname);
     }
 
-    public RoboCat(String nickname, String spaces, int age, int trickLevel, String[] habits) {
+    public RoboCat(String nickname, String spaces, int age, int trickLevel, Set<String> habits) {
         super(nickname, spaces, age, trickLevel, habits);
     }
 }

@@ -2,27 +2,28 @@ package turing.java.edu.az.miniprojects;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.*;
 
 public class Family {
     private Human mother;
     private Human father;
 
-    private Human[] children = new Human[10];
+    private List<Human> children ;
     private int numChildren = 0;
-    private Pet pet;
+    private Set<Pet> pets;
 
     public Family(Human mother, Human father, Pet pet) {
         this.mother = mother;
         this.father = father;
-        this.pet = pet;
-        this.children = new Human[10];
+        this.pets = new HashSet<>();
+        this.children = new ArrayList<>();
     }
 
     public Family(Human mother, Human father, Human[] children, Pet pet) {
         this.mother = mother;
         this.father = father;
-        this.children = children;
-        this.pet = pet;
+        this.children = new ArrayList<>();
+        this.pets = new HashSet<>();
     }
 
     public Family(Human mother, Human father) {
@@ -32,7 +33,7 @@ public class Family {
 
         this.mother = mother;
         this.father = father;
-        this.children = new Human[0];
+        this.children = new ArrayList<>();
     }
 
     public Human getMother() {
@@ -51,29 +52,68 @@ public class Family {
         this.father = father;
     }
 
-    public Human[] getChildren() {
+    public List<Human> getChildren() {
         return children;
     }
 
-    public void setChildren(Human[] children) {
+    public void setChildren(List<Human>children) {
         this.children = children;
     }
 
-    public Pet getPet() {
-        return pet;
+    public Set<Pet> getPet() {
+        return pets;
     }
 
-    public void setPet(Pet pet) {
-        this.pet = pet;
+
+    public void setPet(Set<Pet> pet) {
+        this.pets = pet;
     }
+    public void addChild(Human child) {
+        if (numChildren < children.toArray().length) {
+            children.set(numChildren++, child);
+        }
+    }
+//    public void addChiledren(Human children){
+//        children.addChild(children);
+//    }
+    public void addPet(Pet pet) {
+        pets.add(pet);
+    }
+
+
+    public boolean deleteChild(Human child) {
+        for (int i = 0; i < numChildren; i++) {
+            if (children.get(i).equals(child)) {
+                children.set(i, null);
+                numChildren--;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean deleteChild(int index) {
+        if (index >= 0 && index < numChildren) {
+            for (int i = index; i < numChildren - 1; i++) {
+                children.set(i, children.get(i + 1));
+            }
+            children.set(numChildren - 1, null);
+            numChildren--;
+            return true;
+        }
+        return false;
+    }
+
+
+
 
     @Override
     public String toString() {
         return "Family{" +
                 "mother=" + mother +
                 ", father=" + father +
-                ", children=" + Arrays.toString(children) +
-                ", pet=" + pet +
+                ", children=" + Arrays.toString(new List[]{children}) +
+                ", pet=" + pets +
                 '}';
     }
 
@@ -81,19 +121,18 @@ public class Family {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Family family)) return false;
-        return Objects.equals(getMother(), family.getMother()) && Objects.equals(getFather(), family.getFather()) && Arrays.equals(getChildren(), family.getChildren()) && Objects.equals(getPet(), family.getPet());
+        return Objects.equals(getMother(), family.getMother()) && Objects.equals(getFather(), family.getFather()) && Arrays.equals(new List[]{getChildren()}, new List[]{family.getChildren()}) && Objects.equals(getPet(), family.getPet());
     }
 
     @Override
     public int hashCode() {
         int result = Objects.hash(getMother(), getFather(), getPet());
-        result = 31 * result + Arrays.hashCode(getChildren());
+        result = 31 * result + Arrays.hashCode(new List[]{getChildren()});
         return result;
     }
 
     @Override
     protected void finalize() throws Throwable {
-        System.out.println("Family " + mother + " is being removed.");
         super.finalize();
     }
 

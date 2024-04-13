@@ -2,13 +2,14 @@ package turing.java.edu.az.miniprojects;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.*;
 
 public abstract class Pet {
     private String nickname;
     private Species spaces;
     private int age;
     private int trickLevel;
-    private String[] habits;
+    private Set<String> habits;
 
 
     public Pet(String spaces, String nickname) {
@@ -16,12 +17,12 @@ public abstract class Pet {
         this.nickname = nickname;
     }
 
-    public Pet(String nickname, String spaces, int age, int trickLevel, String[] habits) {
+    public Pet(String nickname, String spaces, int age, int trickLevel, Set habits) {
         this.nickname = nickname;
         this.spaces = Species.DOG;
         this.age = age;
         this.trickLevel = trickLevel;
-        this.habits = habits;
+        this.habits = new HashSet<>();
     }
 
     public String getSpecies() {
@@ -56,11 +57,14 @@ public abstract class Pet {
         this.trickLevel = trickLevel;
     }
 
-    public String[] getHabits() {
+    public Set<String> getHabits() {
         return habits;
     }
+    public void addHabit(String habit){
+        habits.add(habit);
+    }
 
-    public void setHabits(String[] habits) {
+    public void setHabits(Set<String> habits) {
         this.habits = habits;
     }
 
@@ -80,14 +84,19 @@ public abstract class Pet {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Pet pet)) return false;
-        return getAge() == pet.getAge() && getTrickLevel() == pet.getTrickLevel() && Objects.equals(getNickname(), pet.getNickname()) && Objects.equals(spaces, pet.spaces) && Arrays.equals(getHabits(), pet.getHabits());
+        return getAge() == pet.getAge() && getTrickLevel() == pet.getTrickLevel() && Objects.equals(getNickname(), pet.getNickname()) && Objects.equals(spaces, pet.spaces) && Arrays.equals(new Set[]{getHabits()}, new Set[]{pet.getHabits()});
     }
 
     @Override
     public int hashCode() {
         int result = Objects.hash(getNickname(), spaces, getAge(), getTrickLevel());
-        result = 31 * result + Arrays.hashCode(getHabits());
+        result = 31 * result + Arrays.hashCode(new Set[]{getHabits()});
         return result;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
     }
 
     @Override
@@ -97,7 +106,7 @@ public abstract class Pet {
                 ", spaces='" + spaces + '\'' +
                 ", age=" + age +
                 ", trickLevel=" + trickLevel +
-                ", habits=" + Arrays.toString(habits) +
+                ", habits=" + Arrays.toString(new Set[]{habits}) +
                 '}';
     }
 }

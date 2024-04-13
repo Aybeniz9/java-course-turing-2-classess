@@ -2,6 +2,7 @@ package turing.java.edu.az.miniprojects;
 
 import java.util.Arrays;
 import java.util.Objects;
+import java.util.*;
 
 
 public class Human {
@@ -9,9 +10,8 @@ public class Human {
     private String surname;
     private int year;
     private int iq;
-    private DayOfWeek schedule;
+    private Map<String,String> schedule;
     public Family family;
-    private Human[] children = new Human[10];
     private int numChildren = 0;
 
 
@@ -21,12 +21,12 @@ public class Human {
         this.year = year;
     }
 
-    public Human(String name, String surname, int year, int iq, DayOfWeek schedule) {
+    public Human(String name, String surname, int year, int iq) {
         this.name = name;
         this.surname = surname;
         this.year = year;
         this.iq = iq;
-        this.schedule = DayOfWeek.FRIDAY;
+        this.schedule = new HashMap<>();
     }
 
     public Human() {
@@ -89,41 +89,15 @@ public class Human {
         this.iq = iq;
     }
 
-    public DayOfWeek getSchedule() {
+    public Map<String,String> getSchedule() {
         return schedule;
     }
 
-    public void setSchedule(DayOfWeek schedule) {
+    public void setSchedule(Map<String,String> schedule) {
         this.schedule = schedule;
     }
-
-    public boolean deleteChild(Human child) {
-        for (int i = 0; i < numChildren; i++) {
-            if (children[i].equals(child)) {
-                children[i] = null;
-                numChildren--;
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public boolean deleteChild(int index) {
-        if (index >= 0 && index < numChildren) {
-            for (int i = index; i < numChildren - 1; i++) {
-                children[i] = children[i + 1];
-            }
-            children[numChildren - 1] = null;
-            numChildren--;
-            return true;
-        }
-        return false;
-    }
-
-    public void addChild(Human child) {
-        if (numChildren < children.length) {
-            children[numChildren++] = child;
-        }
+    public void addToSchedule(String day,String activity){
+        schedule.put(day,activity);
     }
 
     public int countFamily() {
@@ -134,11 +108,14 @@ public class Human {
     @Override
     public String toString() {
         return "Human{" +
-                "schedule=" + Arrays.toString(new DayOfWeek[]{DayOfWeek.FRIDAY}) +
-                ", name='" + name + '\'' +
+                "name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", year=" + year +
                 ", iq=" + iq +
+                ", schedule=" + schedule +
+                ", family=" + family +
+                ", children=" + Arrays.toString(new List[]{children}) +
+                ", numChildren=" + numChildren +
                 '}';
     }
 
@@ -151,9 +128,14 @@ public class Human {
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(name, surname, year, iq);
-        result = 31 * result + Arrays.hashCode(new DayOfWeek[]{DayOfWeek.FRIDAY});
+        int result = Objects.hash(getName(), getSurname(), getYear(), getIq(), getSchedule(), getFamily(), numChildren);
+        result = 31 * result + Arrays.hashCode(new List[]{children});
         return result;
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
     }
 
     public void greetPet(Pet pet) {

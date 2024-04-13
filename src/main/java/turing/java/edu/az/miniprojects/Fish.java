@@ -1,5 +1,5 @@
 package turing.java.edu.az.miniprojects;
-
+import java.util.*;
 public class Fish extends Pet {
     public Fish(String name) {
         super(name, String.valueOf(Species.FISH));
@@ -20,7 +20,7 @@ public class Fish extends Pet {
         super(spaces, nickname);
     }
 
-    public Fish(String nickname, String spaces, int age, int trickLevel, String[] habits) {
+    public Fish(String nickname, String spaces, int age, int trickLevel, Set habits) {
         super(nickname, spaces, age, trickLevel, habits);
     }
 }

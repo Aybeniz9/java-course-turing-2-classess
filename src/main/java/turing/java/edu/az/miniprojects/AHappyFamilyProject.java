@@ -90,13 +90,13 @@ public class AHappyFamilyProject {
 //        woman.makeup();
 
 
-        System.out.println("Pet age is " + family.getPet().getAge());
-        System.out.println("Pet Tostring is ="+ family.getPet().toString());
-        System.out.println( "Pet trikLEvel= "+ family.getPet().getTrickLevel());
-        human.greetPet();
-        family.getPet().eat();
-        family.getPet().foul();
-        family.getPet().respond();
+//        System.out.println("Pet age is " + family.getPet().getAge());
+//        System.out.println("Pet Tostring is ="+ family.getPet().toString());
+//        System.out.println( "Pet trikLEvel= "+ family.getPet().getTrickLevel());
+//        human.greetPet();
+//        family.getPet().eat();
+//        family.getPet().foul();
+//        family.getPet().respond();
 
     }
 }
