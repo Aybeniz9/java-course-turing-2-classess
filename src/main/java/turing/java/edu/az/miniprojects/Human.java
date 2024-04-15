@@ -114,7 +114,6 @@ public class Human {
                 ", iq=" + iq +
                 ", schedule=" + schedule +
                 ", family=" + family +
-                ", children=" + Arrays.toString(new List[]{children}) +
                 ", numChildren=" + numChildren +
                 '}';
     }
@@ -123,20 +122,18 @@ public class Human {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Human human)) return false;
-        return getYear() == human.getYear() && getIq() == human.getIq() && Objects.equals(getFamily(), human.getFamily()) && getSchedule() == human.getSchedule() && Objects.equals(getName(), human.getName()) && Objects.equals(getSurname(), human.getSurname());
+        return getYear() == human.getYear() && getIq() == human.getIq() && numChildren == human.numChildren && Objects.equals(getName(), human.getName()) && Objects.equals(getSurname(), human.getSurname()) && Objects.equals(getSchedule(), human.getSchedule()) && Objects.equals(getFamily(), human.getFamily());
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(getName(), getSurname(), getYear(), getIq(), getSchedule(), getFamily(), numChildren);
-        result = 31 * result + Arrays.hashCode(new List[]{children});
-        return result;
+        return Objects.hash(getName(), getSurname(), getYear(), getIq(), getSchedule(), getFamily(), numChildren);
     }
 
-    @Override
-    protected void finalize() throws Throwable {
-        super.finalize();
-    }
+//    @Override
+//    protected void finalize() throws Throwable {
+//        super.finalize();
+//    }
 
     public void greetPet(Pet pet) {
 
