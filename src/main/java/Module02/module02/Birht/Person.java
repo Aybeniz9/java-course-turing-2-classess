@@ -1,4 +1,4 @@
-package turing.java.edu.az.module02.Birht;
+package Module02.module02.Birht;
 
 import java.time.LocalDate;
 

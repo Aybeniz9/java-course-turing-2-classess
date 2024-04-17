@@ -1,4 +1,4 @@
-package turing.java.edu.az.module02;
+package Module02.module02;
 
 public class Figures {
     public static void main(String[] args) {

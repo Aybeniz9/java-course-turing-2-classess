@@ -1,4 +1,4 @@
-package turing.java.edu.az.module02.Lesson1;
+package Module02.module02.Lesson1;
 
 import java.util.Scanner;
 
