@@ -1,20 +1,28 @@
 package turing.java.edu.az.miniprojects;
 
+
+import static turing.java.edu.az.miniprojects.DayOfWeek.*;
+
 public class AHappyFamilyProject {
     public static void main(String[] args) {
 
 
-        //Pet pet = new Pet("dog", "Rock", 5, 75, new String[]{"eat", "drink", "sleep"});
-//        Human father = new Human("Vito", "Karleone", 1940,65,DayOfWeek.FRIDAY);
-//        Human mother = new Human("Jane", "Karleone", 1950,89,DayOfWeek.SUNDAY);
-//        Human child =new Human("bebes","bebesov",2004,78,DayOfWeek.WEDNESDAY);
-//        Family family=new Family(mother,father);
-//        Human human=new Human();
-//        Fish fish = new Fish("Nemo");
-//        DomesticCat cat = new DomesticCat("Whiskers");
-//        Dog dog = new Dog("Buddy");
-//        RoboCat roboCat = new RoboCat("Circuit");
-        //
+        Pet pet = new Pet("dog", "Rock", 5, 75, new String[]{"eat", "drink", "sleep"}) {
+            @Override
+            public void respond() {
+
+            }
+
+            Human father = new Human("Vito", "Karleone", 1940, 65, FRIDAY);
+            Human mother = new Human("Jane", "Karleone", 1950, 89, SUNDAY);
+            Human child = new Human("bebes", "bebesov", 2004, 78, WEDNESDAY);
+            Family family = new Family(mother, father);
+            Human human = new Human();
+            Fish fish = new Fish("Nemo");
+            DomesticCat cat = new DomesticCat("Whiskers");
+            Dog dog = new Dog("Buddy");
+            RoboCat roboCat = new RoboCat("Circuit");
+//
 //        fish.respond();
 //        cat.respond();
 //        dog.respond();
@@ -43,12 +51,12 @@ public class AHappyFamilyProject {
 //        System.out.println(" Child Iq = "+child.getIq());
 //        System.out.println("Child toString= "+ child.toString());
 //        System.out.println("Child getDayOfWeek"+child.getSchedule());
-////
-////
-////        System.out.println("Family countFamily= "+family.countFamily());
-////        System.out.println("Family getFather= "+ family.getFather());
-////        System.out.println("Family deleteChild = "+family.deleteChild(4));
-////        System.out.println("Family toString ="+ family.toString());
+//
+//
+//        System.out.println("Family countFamily= "+family.countFamily());
+//        System.out.println("Family getFather= "+ family.getFather());
+//        System.out.println("Family deleteChild = "+family.deleteChild(4));
+//        System.out.println("Family toString ="+ family.toString());
 //
 //        Human man = new Man();
 //        Human woman = new Woman();
@@ -80,24 +88,24 @@ public class AHappyFamilyProject {
 //        System.out.println("After adding child: " + man.countFamily());
 //
 //
-////        Human man = new Man();
-////        Human woman = new Woman();
-////
-////        man.greetPet(cat);
-////        woman.greetPet(dog);
-////
-////        repairCar();
-////        woman.makeup();
+//        Human man = new Man();
+//        Human woman = new Woman();
+//
+//        man.greetPet(cat);
+//        woman.greetPet(dog);
+//
+//        repairCar();
+//        woman.makeup();
 //
 //
-////        System.out.println("Pet age is " + family.getPet().getAge());
-////        System.out.println("Pet Tostring is ="+ family.getPet().toString());
-////        System.out.println( "Pet trikLEvel= "+ family.getPet().getTrickLevel());
-////        human.greetPet();
-////        family.getPet().eat();
-////        family.getPet().foul();
-////        family.getPet().respond();
+//        System.out.println("Pet age is " + family.getPet().getAge());
+//        System.out.println("Pet Tostring is ="+ family.getPet().toString());
+//        System.out.println( "Pet trikLEvel= "+ family.getPet().getTrickLevel());
+//        human.greetPet();
+//        family.getPet().eat();
+//        family.getPet().foul();
+//        family.getPet().respond();
 //
 //    }
 //}}
-    }}
+        }}}

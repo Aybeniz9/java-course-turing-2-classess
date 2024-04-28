@@ -12,6 +12,8 @@ public abstract class Pet {
     private Set<String> habits;
 
 
+
+
     public Pet(String spaces, String nickname) {
         this.spaces = Species.DOG;
         this.nickname = nickname;
@@ -25,12 +27,7 @@ public abstract class Pet {
         this.habits = new HashSet<>();
     }
 
-    public String getSpecies() {
-        return String.valueOf(Species.DOG);
-    }
-
-    public void setSpecies(String spaces) {
-        this.spaces = Species.valueOf(spaces);
+    public Pet() {
     }
 
     public String getNickname() {
@@ -41,9 +38,19 @@ public abstract class Pet {
         this.nickname = nickname;
     }
 
+    public Species getSpaces() {
+        return spaces;
+    }
+
+    public void setSpaces(Species spaces) {
+        this.spaces = spaces;
+    }
+
     public int getAge() {
         return age;
     }
+
+
 
     public void setAge(int age) {
         this.age = age;
@@ -60,25 +67,22 @@ public abstract class Pet {
     public Set<String> getHabits() {
         return habits;
     }
-    public void addHabit(String habit){
-        habits.add(habit);
-    }
 
     public void setHabits(Set<String> habits) {
         this.habits = habits;
     }
 
+  public void addHabit(String habit){
+       habits.add(habit);
+   }
+
     public void eat() {
         System.out.println("I am eating");
     }
 
-    public void respond() {
-        System.out.println("Hello, owner. I am " + nickname + ". I miss you!");
-    }
+    public abstract void respond();
 
-    public void foul() {
-        System.out.println("I need to cover it up");
-    }
+
 
     @Override
     public boolean equals(Object o) {

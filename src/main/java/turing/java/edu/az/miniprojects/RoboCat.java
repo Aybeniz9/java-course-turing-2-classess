@@ -15,7 +15,7 @@ public class RoboCat extends Pet {
         super(spaces, nickname);
     }
 
-    public RoboCat(String nickname, String spaces, int age, int trickLevel, Set<String> habits) {
+    public RoboCat(String nickname, String spaces, int age, int trickLevel, Set habits) {
         super(nickname, spaces, age, trickLevel, habits);
     }
 }

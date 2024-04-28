@@ -21,7 +21,7 @@ public class Dog extends Pet {
         super(spaces, nickname);
     }
 
-    public Dog(String nickname, String spaces, int age, int trickLevel, Set<String> habits) {
-        super(nickname, spaces, age, trickLevel, Collections.singleton(habits));
+    public Dog(String nickname, String spaces, int age, int trickLevel, Set habits) {
+        super(nickname, spaces, age, trickLevel, habits);
     }
 }

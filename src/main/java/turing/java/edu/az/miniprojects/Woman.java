@@ -1,9 +1,9 @@
 package turing.java.edu.az.miniprojects;
 
 final class Woman extends Human {
-    @Override
+
     public void greetPet(Pet pet) {
-        System.out.println("Hi, sweet " + family.getPet().getNickname() + "!");
+      getFamily().getPet().stream().forEach(pet1 -> System.out.println("Hello" + pet.getNickname()));
     }
 
 

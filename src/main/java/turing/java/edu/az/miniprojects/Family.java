@@ -8,9 +8,12 @@ public class Family {
     private Human mother;
     private Human father;
 
-    private List<Human> children ;
-    private int numChildren = 0;
-    private Set<Pet> pets;
+    private List<Human> children;
+    private HashSet<Pet> pets;
+
+    public void greetPet() {
+        pets.forEach(pet -> System.out.println(pet + "SALLAAAAAmmmm"));
+    }
 
     public Family(Human mother, Human father, Pet pet) {
         this.mother = mother;
@@ -19,11 +22,12 @@ public class Family {
         this.children = new ArrayList<>();
     }
 
-    public Family(Human mother, Human father, Human[] children, Pet pet) {
+
+    public Family(Human mother, Human father, List<Human> children,  HashSet<Pet> pets) {
         this.mother = mother;
         this.father = father;
-        this.children = new ArrayList<>();
-        this.pets = new HashSet<>();
+        this.children = children;
+        this.pets = pets;
     }
 
     public Family(Human mother, Human father) {
@@ -56,7 +60,7 @@ public class Family {
         return children;
     }
 
-    public void setChildren(List<Human>children) {
+    public void setChildren(List<Human> children) {
         this.children = children;
     }
 
@@ -66,45 +70,26 @@ public class Family {
 
 
     public void setPet(Set<Pet> pet) {
-        this.pets = pet;
+        this.pets = (HashSet<Pet>) pet;
     }
+
     public void addChild(Human child) {
-        if (numChildren < children.toArray().length) {
-            children.set(numChildren++, child);
-        }
+        children.add(child);
     }
-//    public void addChiledren(Human children){
-//        children.addChild(children);
-//    }
+
     public void addPet(Pet pet) {
         pets.add(pet);
     }
 
 
-    public boolean deleteChild(Human child) {
-        for (int i = 0; i < numChildren; i++) {
-            if (children.get(i).equals(child)) {
-                children.set(i, null);
-                numChildren--;
-                return true;
-            }
-        }
-        return false;
+    public void deleteChild(Human child) {
+        children.remove(child);
     }
 
     public boolean deleteChild(int index) {
-        if (index >= 0 && index < numChildren) {
-            for (int i = index; i < numChildren - 1; i++) {
-                children.set(i, children.get(i + 1));
-            }
-            children.set(numChildren - 1, null);
-            numChildren--;
-            return true;
-        }
+        children.remove(index);
         return false;
     }
-
-
 
 
     @Override

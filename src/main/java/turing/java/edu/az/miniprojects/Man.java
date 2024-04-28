@@ -4,7 +4,8 @@ import java.util.*;
 final class Man extends Human {
     @Override
     public void greetPet(Pet pet) {
-        System.out.println("SAALAAAMMM Mann " + family.getPet().getNickname() + "!");
+
+        getFamily().getPet().stream().forEach(pet1 -> System.out.println("Hello"+getSurname()));
     }
 
     public void repairCar() {

@@ -1,6 +1,5 @@
 package turing.java.edu.az.miniprojects;
 
-import java.util.Arrays;
 import java.util.Objects;
 import java.util.*;
 
@@ -12,39 +11,41 @@ public class Human {
     private int iq;
     private Map<String,String> schedule;
     public Family family;
-    private int numChildren = 0;
 
-
-    public Human(String name, String surname, int year) {
-        this.name = name;
-        this.surname = surname;
-        this.year = year;
-    }
-
-    public Human(String name, String surname, int year, int iq) {
+    public Human(String name, String surname, int year, int iq, Map<String, String> schedule, Family family) {
         this.name = name;
         this.surname = surname;
         this.year = year;
         this.iq = iq;
-        this.schedule = new HashMap<>();
+        this.schedule = schedule;
+        this.family = family;
     }
+
+    public Human(String name, String surname, int year, int iq, Map<String, String> schedule) {
+        this.name = name;
+        this.surname = surname;
+        this.year = year;
+        this.iq = iq;
+        this.schedule = schedule;
+    }
+
 
     public Human() {
     }
 
 
-    public DayOfWeek name(DayOfWeek dayOfWeek) {
-        return dayOfWeek;
-
-    }
-
     public void greetPet() {
-        System.out.println("Hello," + family.getPet().getNickname());
-    }
 
+        for (int i = 0; i < family.getPet().size(); i++) {
+            family.getPet().stream().forEach(pet -> System.out.println("Hello"+pet.getNickname()));
+
+        }
+    }
     public void describePet() {
-        String slyLevel = (family.getPet().getTrickLevel() > 50) ? "very sly" : "almost not sly";
-        System.out.println("I have an " + family.getPet().getSpecies() + " is " + family.getPet().getAge() + " years old, he is " + slyLevel);
+        for (int i = 0; i <family.getPet().size();i++){
+            family.getPet().stream().forEach(pet -> System.out.println("I have an "+pet.getSpaces()+"is"+pet.getAge()+"years old , he is "+((pet.getTrickLevel()> 50) ? "very sly" : "almost not sly")));
+
+        }
     }
 
     public String getName() {
@@ -100,9 +101,6 @@ public class Human {
         schedule.put(day,activity);
     }
 
-    public int countFamily() {
-        return 1 + numChildren;
-    }
 
 
     @Override
@@ -114,7 +112,6 @@ public class Human {
                 ", iq=" + iq +
                 ", schedule=" + schedule +
                 ", family=" + family +
-                ", numChildren=" + numChildren +
                 '}';
     }
 
@@ -122,21 +119,22 @@ public class Human {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Human human)) return false;
-        return getYear() == human.getYear() && getIq() == human.getIq() && numChildren == human.numChildren && Objects.equals(getName(), human.getName()) && Objects.equals(getSurname(), human.getSurname()) && Objects.equals(getSchedule(), human.getSchedule()) && Objects.equals(getFamily(), human.getFamily());
+        return getYear() == human.getYear() && getIq() == human.getIq() && Objects.equals(getName(), human.getName()) && Objects.equals(getSurname(), human.getSurname()) && Objects.equals(getSchedule(), human.getSchedule()) && Objects.equals(getFamily(), human.getFamily());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getName(), getSurname(), getYear(), getIq(), getSchedule(), getFamily(), numChildren);
+        return Objects.hash(getName(), getSurname(), getYear(), getIq(), getSchedule(), getFamily());
     }
 
-//    @Override
-//    protected void finalize() throws Throwable {
-//        super.finalize();
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+    }
+
+//    public void greetPet(Pet pet) {
+//        System.out.println("Hello"+family.getPet().getNickname());
+//
 //    }
-
-    public void greetPet(Pet pet) {
-
-    }
 }
 

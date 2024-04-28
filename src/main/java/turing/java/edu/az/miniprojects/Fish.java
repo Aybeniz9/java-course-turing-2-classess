@@ -10,7 +10,7 @@ public class Fish extends Pet {
         System.out.println("swimminnggg");
     }
 
-    @Override
+
     public void foul() {
         // Fish does not foul
         System.out.println("Fish doesn't foul.");

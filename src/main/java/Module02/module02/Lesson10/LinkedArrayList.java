@@ -1,4 +1,4 @@
-package Module02.module02.Lesson14;
+package Module02.module02.Lesson10;
 
 public class LinkedArrayList <E>{
     private Node<E> head;
