@@ -17,7 +17,7 @@ public class Family {
 
     public Family(Human mother, Human father) {
         this.mother = mother;
-        this.father=father;
+        this.father = father;
     }
 
     public Family(Human mother, Human father, Pet pet) {
@@ -28,14 +28,14 @@ public class Family {
     }
 
 
-    public Family(Human mother, Human father, List<Human> children,  HashSet<Pet> pets) {
+    public Family(Human mother, Human father, List<Human> children, HashSet<Pet> pets) {
         this.mother = mother;
         this.father = father;
         this.children = children;
         this.pets = pets;
     }
 
-//    public Family(Human mother, Human father) {
+    //    public Family(Human mother, Human father) {
 //        if (mother == null || father == null) {
 //            throw new IllegalArgumentException("Both parents must be provided.");
 //        }
@@ -44,9 +44,10 @@ public class Family {
 //        this.father = father;
 //        this.children = new ArrayList<>();
 //    }
-public int countFamily(){
-        return children.size()+2;
-}
+    public int countFamily() {
+        return children.size() + 2;
+    }
+
     public Human getMother() {
         return mother;
     }
@@ -97,9 +98,10 @@ public int countFamily(){
         children.remove(index);
         return false;
     }
-    public String prettyFormat(){
+
+    public String prettyFormat() {
         return "{mother = %s , father = % s , pets =% s , children = %s}"
-                .formatted(mother,father,pets,children);
+                .formatted(mother, father, pets, children);
     }
 
 

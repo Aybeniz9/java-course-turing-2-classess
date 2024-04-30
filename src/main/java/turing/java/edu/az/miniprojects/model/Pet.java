@@ -12,8 +12,6 @@ public abstract class Pet {
     private Set<String> habits;
 
 
-
-
     public Pet(String spaces, String nickname) {
         this.spaces = Species.DOG;
         this.nickname = nickname;
@@ -51,7 +49,6 @@ public abstract class Pet {
     }
 
 
-
     public void setAge(int age) {
         this.age = age;
     }
@@ -72,16 +69,15 @@ public abstract class Pet {
         this.habits = habits;
     }
 
-  public void addHabit(String habit){
-       habits.add(habit);
-   }
+    public void addHabit(String habit) {
+        habits.add(habit);
+    }
 
     public void eat() {
         System.out.println("I am eating");
     }
 
     public abstract void respond();
-
 
 
     @Override

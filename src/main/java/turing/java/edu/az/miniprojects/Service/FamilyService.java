@@ -90,6 +90,7 @@ public class FamilyService {
             childrenToRemove.forEach(family::deleteChild);
         });
     }
+
     public int count() {
         return familyDao.getAllFamilies().size();
     }

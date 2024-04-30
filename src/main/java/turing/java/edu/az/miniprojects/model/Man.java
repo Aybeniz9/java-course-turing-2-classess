@@ -11,7 +11,7 @@ final class Man extends Human {
 
     public void greetPet(Pet pet) {
 
-        getFamily().getPet().stream().forEach(pet1 -> System.out.println("Hello"+getSurname()));
+        getFamily().getPet().stream().forEach(pet1 -> System.out.println("Hello" + getSurname()));
     }
 
     public void repairCar() {

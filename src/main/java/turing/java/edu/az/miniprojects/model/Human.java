@@ -9,7 +9,7 @@ public class Human {
     private String surname;
     private long year;
     private int iq;
-    private Map<String,String> schedule;
+    private Map<String, String> schedule;
     public Family family;
 
     public Human(String name, String surname, long year, int iq, Map<String, String> schedule, Family family) {
@@ -37,13 +37,14 @@ public class Human {
     public void greetPet() {
 
         for (int i = 0; i < family.getPet().size(); i++) {
-            family.getPet().stream().forEach(pet -> System.out.println("Hello"+pet.getNickname()));
+            family.getPet().stream().forEach(pet -> System.out.println("Hello" + pet.getNickname()));
 
         }
     }
+
     public void describePet() {
-        for (int i = 0; i <family.getPet().size();i++){
-            family.getPet().stream().forEach(pet -> System.out.println("I have an "+pet.getSpaces()+"is"+pet.getAge()+"years old , he is "+((pet.getTrickLevel()> 50) ? "very sly" : "almost not sly")));
+        for (int i = 0; i < family.getPet().size(); i++) {
+            family.getPet().stream().forEach(pet -> System.out.println("I have an " + pet.getSpaces() + "is" + pet.getAge() + "years old , he is " + ((pet.getTrickLevel() > 50) ? "very sly" : "almost not sly")));
 
         }
     }
@@ -90,17 +91,17 @@ public class Human {
         this.iq = iq;
     }
 
-    public Map<String,String> getSchedule() {
+    public Map<String, String> getSchedule() {
         return schedule;
     }
 
-    public void setSchedule(Map<String,String> schedule) {
+    public void setSchedule(Map<String, String> schedule) {
         this.schedule = schedule;
     }
-    public void addToSchedule(String day,String activity){
-        schedule.put(day,activity);
-    }
 
+    public void addToSchedule(String day, String activity) {
+        schedule.put(day, activity);
+    }
 
 
     @Override

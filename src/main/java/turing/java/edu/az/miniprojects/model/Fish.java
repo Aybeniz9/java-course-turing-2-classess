@@ -1,6 +1,7 @@
 package turing.java.edu.az.miniprojects.model;
 
 import java.util.*;
+
 public class Fish extends Pet {
     public Fish(String name) {
         super(name, String.valueOf(Species.FISH));

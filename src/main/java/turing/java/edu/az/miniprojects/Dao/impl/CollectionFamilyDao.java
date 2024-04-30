@@ -5,14 +5,14 @@ import turing.java.edu.az.miniprojects.Dao.FamilyDao;
 
 import java.util.*;
 
-public class CollectionFamilyDao  implements FamilyDao {
+public class CollectionFamilyDao implements FamilyDao {
     public static List<Family> allfamilies;
+
     @Override
     public List<Family> getAllFamilies() {
         try {
             return allfamilies;
-        }
-        catch (Exception e){
+        } catch (Exception e) {
             return null;
         }
     }
@@ -21,18 +21,19 @@ public class CollectionFamilyDao  implements FamilyDao {
     public Family getFamilyIndex(int index) {
         try {
             return getFamilyIndex(index);
-        }catch (Exception e){
-        return null;
-    }}
+        } catch (Exception e) {
+            return null;
+        }
+    }
 
     @Override
     public boolean deleteFamily(int index) {
-     try {
-         allfamilies.remove(index);
-         return true;
-     }catch (Exception e){
-         return false;
-     }
+        try {
+            allfamilies.remove(index);
+            return true;
+        } catch (Exception e) {
+            return false;
+        }
 
     }
 
@@ -41,23 +42,23 @@ public class CollectionFamilyDao  implements FamilyDao {
         try {
             allfamilies.remove(String.valueOf(family));
             return true;
-        }catch (Exception e){
+        } catch (Exception e) {
             return false;
         }
     }
 
     @Override
     public void saveFamily(Family family) {
-        if ( allfamilies.contains(family)){
-            int index=allfamilies.indexOf(family);
-            allfamilies.set(index,family);}
-            else{allfamilies.add(family);
-
-            }
-
-
+        if (allfamilies.contains(family)) {
+            int index = allfamilies.indexOf(family);
+            allfamilies.set(index, family);
+        } else {
+            allfamilies.add(family);
 
         }
 
+
     }
+
+}
 

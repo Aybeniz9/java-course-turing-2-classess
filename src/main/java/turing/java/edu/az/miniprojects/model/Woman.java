@@ -10,7 +10,7 @@ final class Woman extends Human {
     }
 
     public void greetPet(Pet pet) {
-      getFamily().getPet().stream().forEach(pet1 -> System.out.println("Hello" + pet.getNickname()));
+        getFamily().getPet().stream().forEach(pet1 -> System.out.println("Hello" + pet.getNickname()));
     }
 
 

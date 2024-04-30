@@ -1,8 +1,10 @@
 package turing.java.edu.az.miniprojects.model;
+
 import turing.java.edu.az.miniprojects.model.Pet;
 import turing.java.edu.az.miniprojects.model.Species;
 
 import java.util.*;
+
 public class RoboCat extends Pet {
 
     public RoboCat(String name) {

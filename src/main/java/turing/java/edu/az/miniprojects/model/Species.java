@@ -11,6 +11,7 @@ public enum Species {
     Species(String speciesName) {
         this.speciesName = speciesName;
     }
+
     @Override
     public String toString() {
         return speciesName;
