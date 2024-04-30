@@ -1,7 +1,8 @@
-package turing.java.edu.az.miniprojects;
-import java.util.*;
+package turing.java.edu.az.miniprojects.model;
+import turing.java.edu.az.miniprojects.model.Pet;
+import turing.java.edu.az.miniprojects.model.Species;
 
-import java.util.Collections;
+import java.util.*;
 
 public class Dog extends Pet {
     public Dog(String name) {

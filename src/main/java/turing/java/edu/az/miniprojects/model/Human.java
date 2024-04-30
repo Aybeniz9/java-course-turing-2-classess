@@ -1,4 +1,4 @@
-package turing.java.edu.az.miniprojects;
+package turing.java.edu.az.miniprojects.model;
 
 import java.util.Objects;
 import java.util.*;
@@ -7,12 +7,12 @@ import java.util.*;
 public class Human {
     private String name;
     private String surname;
-    private int year;
+    private long year;
     private int iq;
     private Map<String,String> schedule;
     public Family family;
 
-    public Human(String name, String surname, int year, int iq, Map<String, String> schedule, Family family) {
+    public Human(String name, String surname, long year, int iq, Map<String, String> schedule, Family family) {
         this.name = name;
         this.surname = surname;
         this.year = year;
@@ -21,7 +21,7 @@ public class Human {
         this.family = family;
     }
 
-    public Human(String name, String surname, int year, int iq, Map<String, String> schedule) {
+    public Human(String name, String surname, long year, int iq, Map<String, String> schedule) {
         this.name = name;
         this.surname = surname;
         this.year = year;
@@ -30,7 +30,7 @@ public class Human {
     }
 
 
-    public Human() {
+    public Human(String motherName, String motherSurname) {
     }
 
 
@@ -74,11 +74,11 @@ public class Human {
         this.surname = surname;
     }
 
-    public int getYear() {
+    public long getYear() {
         return year;
     }
 
-    public void setYear(int year) {
+    public void setYear(long year) {
         this.year = year;
     }
 

@@ -1,4 +1,4 @@
-package turing.java.edu.az.miniprojects;
+package turing.java.edu.az.miniprojects.model;
 
 public enum DayOfWeek {
     MONDAY("Monday"),

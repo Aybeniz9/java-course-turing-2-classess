@@ -1,4 +1,4 @@
-package turing.java.edu.az.miniprojects;
+package turing.java.edu.az.miniprojects.model;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -13,6 +13,11 @@ public class Family {
 
     public void greetPet() {
         pets.forEach(pet -> System.out.println(pet + "SALLAAAAAmmmm"));
+    }
+
+    public Family(Human mother, Human father) {
+        this.mother = mother;
+        this.father=father;
     }
 
     public Family(Human mother, Human father, Pet pet) {
@@ -30,16 +35,18 @@ public class Family {
         this.pets = pets;
     }
 
-    public Family(Human mother, Human father) {
-        if (mother == null || father == null) {
-            throw new IllegalArgumentException("Both parents must be provided.");
-        }
-
-        this.mother = mother;
-        this.father = father;
-        this.children = new ArrayList<>();
-    }
-
+//    public Family(Human mother, Human father) {
+//        if (mother == null || father == null) {
+//            throw new IllegalArgumentException("Both parents must be provided.");
+//        }
+//
+//        this.mother = mother;
+//        this.father = father;
+//        this.children = new ArrayList<>();
+//    }
+public int countFamily(){
+        return children.size()+2;
+}
     public Human getMother() {
         return mother;
     }
@@ -89,6 +96,10 @@ public class Family {
     public boolean deleteChild(int index) {
         children.remove(index);
         return false;
+    }
+    public String prettyFormat(){
+        return "{mother = %s , father = % s , pets =% s , children = %s}"
+                .formatted(mother,father,pets,children);
     }
 
 

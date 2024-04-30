@@ -1,4 +1,4 @@
-package turing.java.edu.az.miniprojects;
+package turing.java.edu.az.miniprojects.model;
 
 import java.util.Arrays;
 import java.util.Objects;
