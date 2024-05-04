@@ -1,4 +1,4 @@
-package Module02.module02;
+package Module02.module02.Lesson1;
 import java.util.Scanner;
 
 public class App {
